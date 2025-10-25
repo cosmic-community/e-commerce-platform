@@ -10,6 +10,12 @@ export default function HeroSection({ collections }: HeroSectionProps) {
   }
 
   const featuredCollection = collections[0]
+  
+  // Added: Early return if featuredCollection is undefined
+  if (!featuredCollection) {
+    return null
+  }
+  
   const bannerImage = featuredCollection.metadata?.banner_image
 
   return (

@@ -14,7 +14,7 @@ export default function ProductDetail({ product }: ProductDetailProps) {
   return (
     <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
       <div>
-        {images.length > 0 ? (
+        {images.length > 0 && images[0] ? (
           <div className="space-y-4">
             <div className="aspect-square bg-gray-100 rounded-lg overflow-hidden">
               <img
